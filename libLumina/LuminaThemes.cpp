@@ -233,19 +233,38 @@ QString LTHEME::assembleStyleSheet(QString themepath, QString colorpath, QString
   //Now perform the color replacements
   for(int i=0; i<colors.length(); i++){
     if(colors[i].isEmpty() || colors[i].startsWith("#")){ continue; }
-    else if(colors[i].startsWith("PRIMARYCOLOR=")){ stylesheet = stylesheet.replace("%%PRIMARYCOLOR%%", colors[i].section("=",1,1).simplified()); }
-    else if(colors[i].startsWith("SECONDARYCOLOR=")){ stylesheet = stylesheet.replace("%%SECONDARYCOLOR%%", colors[i].section("=",1,1).simplified()); }
-    else if(colors[i].startsWith("HIGHLIGHTCOLOR=")){ stylesheet = stylesheet.replace("%%HIGHLIGHTCOLOR%%", colors[i].section("=",1,1).simplified()); }
-    else if(colors[i].startsWith("ACCENTCOLOR=")){ stylesheet = stylesheet.replace("%%ACCENTCOLOR%%", colors[i].section("=",1,1).simplified()); }
-    else if(colors[i].startsWith("PRIMARYDISABLECOLOR=")){ stylesheet = stylesheet.replace("%%PRIMARYDISABLECOLOR%%", colors[i].section("=",1,1).simplified()); }
-    else if(colors[i].startsWith("SECONDARYDISABLECOLOR=")){ stylesheet = stylesheet.replace("%%SECONDARYDISABLECOLOR%%", colors[i].section("=",1,1).simplified()); }
-    else if(colors[i].startsWith("HIGHLIGHTDISABLECOLOR=")){ stylesheet = stylesheet.replace("%%HIGHLIGHTDISABLECOLOR%%", colors[i].section("=",1,1).simplified()); }
-    else if(colors[i].startsWith("ACCENTDISABLECOLOR=")){ stylesheet = stylesheet.replace("%%ACCENTDISABLECOLOR%%", colors[i].section("=",1,1).simplified()); }
-    else if(colors[i].startsWith("BASECOLOR=")){ stylesheet = stylesheet.replace("%%BASECOLOR%%", colors[i].section("=",1,1).simplified()); }
-    else if(colors[i].startsWith("ALTBASECOLOR=")){ stylesheet = stylesheet.replace("%%ALTBASECOLOR%%", colors[i].section("=",1,1).simplified()); }
-    else if(colors[i].startsWith("TEXTCOLOR=")){ stylesheet = stylesheet.replace("%%TEXTCOLOR%%", colors[i].section("=",1,1).simplified()); }
-    else if(colors[i].startsWith("TEXTDISABLECOLOR=")){ stylesheet = stylesheet.replace("%%TEXTDISABLECOLOR%%", colors[i].section("=",1,1).simplified()); }
-    else if(colors[i].startsWith("TEXTHIGHLIGHTCOLOR=")){ stylesheet = stylesheet.replace("%%TEXTHIGHLIGHTCOLOR%%", colors[i].section("=",1,1).simplified()); }
+    else if(colors[i].startsWith("PRIMARYCOLOR=")){
+	  stylesheet = stylesheet.replace("%%PRIMARYCOLOR%%", colors[i].section("=",1,1).simplified()); }
+    else if(colors[i].startsWith("SECONDARYCOLOR=")){
+	  stylesheet = stylesheet.replace("%%SECONDARYCOLOR%%", colors[i].section("=",1,1).simplified()); }
+    else if(colors[i].startsWith("HIGHLIGHTCOLOR=")){
+	  stylesheet = stylesheet.replace("%%HIGHLIGHTCOLOR%%", colors[i].section("=",1,1).simplified()); }
+    else if(colors[i].startsWith("ACCENTCOLOR=")){
+	  stylesheet = stylesheet.replace("%%ACCENTCOLOR%%", colors[i].section("=",1,1).simplified()); }
+    else if(colors[i].startsWith("PRIMARYDISABLECOLOR=")){
+	  stylesheet = stylesheet.replace("%%PRIMARYDISABLECOLOR%%", colors[i].section("=",1,1).simplified()); }
+    else if(colors[i].startsWith("SECONDARYDISABLECOLOR=")){
+	  stylesheet = stylesheet.replace("%%SECONDARYDISABLECOLOR%%", colors[i].section("=",1,1).simplified()); }
+    else if(colors[i].startsWith("HIGHLIGHTDISABLECOLOR=")){
+	  stylesheet = stylesheet.replace("%%HIGHLIGHTDISABLECOLOR%%", colors[i].section("=",1,1).simplified()); }
+    else if(colors[i].startsWith("ACCENTDISABLECOLOR=")){
+	  stylesheet = stylesheet.replace("%%ACCENTDISABLECOLOR%%", colors[i].section("=",1,1).simplified()); }
+    else if(colors[i].startsWith("BASECOLOR=")){
+	  stylesheet = stylesheet.replace("%%BASECOLOR%%", colors[i].section("=",1,1).simplified()); }
+    else if(colors[i].startsWith("ALTBASECOLOR=")){
+	  stylesheet = stylesheet.replace("%%ALTBASECOLOR%%", colors[i].section("=",1,1).simplified()); }
+    else if(colors[i].startsWith("PRIMARYTEXTCOLOR=")){
+	  stylesheet = stylesheet.replace("%%PRIMARYTEXTCOLOR%%", colors[i].section("=",1,1).simplified()); }
+    else if(colors[i].startsWith("PRIMARYTEXTDISABLECOLOR=")){
+	  stylesheet = stylesheet.replace("%%PRIMARYTEXTDISABLECOLOR%%", colors[i].section("=",1,1).simplified()); }
+    else if(colors[i].startsWith("PRIMARYTEXTHIGHLIGHTCOLOR=")){
+	  stylesheet = stylesheet.replace("%%PRIMARYTEXTHIGHLIGHTCOLOR%%", colors[i].section("=",1,1).simplified()); }
+	else if(colors[i].startsWith("SECONDARYTEXTCOLOR=")){
+	  stylesheet = stylesheet.replace("%%SECONDARYTEXTCOLOR%%", colors[i].section("=",1,1).simplified()); }
+    else if(colors[i].startsWith("SECONDARYTEXTDISABLECOLOR=")){
+	  stylesheet = stylesheet.replace("%%SECONDARYTEXTDISABLECOLOR%%", colors[i].section("=",1,1).simplified()); }
+    else if(colors[i].startsWith("SECONDARYTEXTHIGHLIGHTCOLOR=")){
+	  stylesheet = stylesheet.replace("%%SECONDARYTEXTHIGHLIGHTCOLOR%%", colors[i].section("=",1,1).simplified()); }
   }
   stylesheet = stylesheet.replace("%%FONT%%", "\""+font+"\"");
   stylesheet = stylesheet.replace("%%FONTSIZE%%", fontsize);
