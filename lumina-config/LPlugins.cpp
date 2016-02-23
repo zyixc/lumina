@@ -280,23 +280,41 @@ void LPlugins::LoadMenuPlugins(){
 
 void LPlugins::LoadColorItems(){
   COLORS.clear();
-  //Text Color
+  //Primary Text Color
   LPI info;
-    info.name = QObject::tr("Text");
-    info.description = QObject::tr("Color to use for all visible text.");
-    info.ID = "TEXTCOLOR";
+    info.name = QObject::tr("Primary text");
+    info.description = QObject::tr("Color to use for all visible primary text.");
+    info.ID = "PRIMARYTEXTCOLOR";
   COLORS.insert(info.ID, info);
-  //Text Color (Disabled)
+  //Primary Text Color (Disabled)
   info = LPI(); //clear it
-    info.name = QObject::tr("Text (Disabled)");
-    info.description = QObject::tr("Text color for disabled or inactive items.");
-    info.ID = "TEXTDISABLECOLOR";
+    info.name = QObject::tr("Primary text (Disabled)");
+    info.description = QObject::tr("Primary text color for disabled or inactive items.");
+    info.ID = "PRIMARYTEXTDISABLECOLOR";
   COLORS.insert(info.ID, info);
-  //Text Color (Highlighted)
+  //Primary Text Color (Highlighted)
   info = LPI(); //clear it
-    info.name = QObject::tr("Text (Highlighted)");
-    info.description = QObject::tr("Text color when selection is highlighted.");
-    info.ID = "TEXTHIGHLIGHTCOLOR";
+    info.name = QObject::tr("Primary text (Highlighted)");
+    info.description = QObject::tr("Primary text color when selection is highlighted.");
+    info.ID = "PRIMARYTEXTHIGHLIGHTCOLOR";
+  COLORS.insert(info.ID, info);
+  //Secondary Text Color
+  info = LPI(); //clear it
+    info.name = QObject::tr("Secondary text");
+    info.description = QObject::tr("Color to use for all visible secondary text.");
+    info.ID = "SECONDARYTEXTCOLOR";
+  COLORS.insert(info.ID, info);
+  //Secondary Text Color (Disabled)
+  info = LPI(); //clear it
+    info.name = QObject::tr("Secondary text (Disabled)");
+    info.description = QObject::tr("Secondary text color for disabled or inactive items.");
+    info.ID = "SECONDARYTEXTDISABLECOLOR";
+  COLORS.insert(info.ID, info);
+  //Secondary Text Color (Highlighted)
+  info = LPI(); //clear it
+    info.name = QObject::tr("Secondary text (Highlighted)");
+    info.description = QObject::tr("Secondary text color when selection is highlighted.");
+    info.ID = "SECONDARYTEXTHIGHLIGHTCOLOR";
   COLORS.insert(info.ID, info);
   //Base Color (Normal)
   info = LPI(); //clear it
